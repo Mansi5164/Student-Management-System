@@ -1,55 +1,73 @@
 # 📚 Student-Management-System (Spring Boot)
 
-A backend application built using Spring Boot that manages student data with clean architecture, layered design, and strong validation rules.
-This project focuses on writing production-grade REST APIs with DTO validation, custom annotations, and centralized exception handling.
+A backend application built using Spring Boot that manages student data with clean architecture and strong validation rules.
 
 🚀 Features
+Core CRUD Operations
 
-✅ Core CRUD Operations
 Add new students
+
 Update student details
+
 Get student by ID
+
 Get all students
+
 Delete students
 
 🔐 Advanced Validation (DTO Level)
+
 Using Jakarta Validation + custom annotations:
+
 @NotBlank, @Size, @Email, @Digits, @Min, @Max
-Custom Annotation: @PrimeNumberValidation
-Ensures the student’s age is a prime number.
-Custom Annotation: @StudentRoleValidation
-Restricts role values to supported roles (e.g., ADMIN, USER).
+
+@PrimeNumberValidation – ensures age is a prime number
+
+@StudentRoleValidation – validates allowed roles (ADMIN/USER)
 
 ⚠️ Exception Handling
-Centralized and consistent handling for:
+
+Centralized exception handling for:
+
 ResourceNotFoundException
+
 Validation errors (MethodArgumentNotValidException)
-Custom business logic exceptions
-Invalid data format & other runtime errors
-Helps produce meaningful JSON error responses.
+
+Custom business exceptions
+
+Invalid data format errors
 
 🏗️ Tech Stack
+
 Java 17+
-Spring Boot (Web, Validation)
+
+Spring Boot
+
 Lombok
+
 Maven
-MySQL / PostgreSQL (optional)
+
+MySQL / PostgreSQL
 
 📂 Project Structure
 src/main/java/com/student_management_system
 │
-├── controller/       → REST APIs
-├── service/          → Business logic
-├── repository/       → JPA repositories
-├── dto/              → Data Transfer Objects with validations
-├── annotation/       → Custom validation annotations
-├── exception/        → Central exception handling
-└── entity/           → JPA entity classes
+├── controller/       
+├── service/          
+├── repository/       
+├── dto/              
+├── annotation/       
+├── exception/        
+└── entity/          
 
 🔮 Upcoming Features
+
 Pagination & sorting
-Search/filter endpoints
-Authentication & authorization (Spring Security)
+
+Search & filters
+
+Role-based security (Spring Security)
+
 More custom validators
 
-UI integration (React/Angular)
+Frontend UI integration
